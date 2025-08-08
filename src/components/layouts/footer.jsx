@@ -18,30 +18,28 @@ const AppFooter = () => {
   return (
     <Footer
       style={{
-        backgroundColor: "#0f0f0f",
+         backgroundColor: "#141414ff",
         padding: "50px 20px",
-        color: "#fff",
+        borderColor:"white"
 
       }}
     >
-    <div  style={{
-    width: "100%",
-    maxWidth: "1400px",
+    <div className="standard-layout"  style={{
     backgroundColor: "#232121",
     borderRadius: "20px",
-    margin: "0 auto",           // ✅ Centers horizontally
-    padding: "20px"             // Optional, adds breathing room
+    border: "2px solid #d1ccc4ff" // width + style + color
+      
   }}>
         <Row gutter={[32, 32]} justify="space-between">
         {/* Left Section */}
         <Col xs={24} md={10}>
-          <Title level={4} style={{ color: "#fff", marginBottom: 10 }}>
+          <Title className="footer-title" style={{ color: "#fff", marginBottom: 10 }}>
             <span style={{ color: "#4da3ff" }}>Space </span>
             <span style={{ color: "#ff9500" }}>Education </span>
             <span style={{ color: "#4da3ff" }}>Research </span>
             <span style={{ color: "#fff" }}>Lab</span>
           </Title>
-          <Text style={{ color: "#ccc" }}>
+          <Text className="footer-text" style={{ color: "#ccc" }}>
             A component of National Center of GIS and Space Applications for the Awareness,
             Education, Outreach and Popularization of Space Science, Technology & its Applications
           </Text>
@@ -56,21 +54,24 @@ const AppFooter = () => {
 
         {/* Contact Us */}
         <Col xs={24} sm={12} md={5}>
-          <Title level={5} style={{ color: "#fff" }}>Contact Us</Title>
-          <Text style={{ display: "block", color: "#ccc" }}>serl.ncgsa@gmail.com</Text>
-          <Text style={{ display: "block", color: "#ccc" }}>+92-51-907-5864 | 5799</Text>
-          <Text style={{ display: "block", color: "#ccc" }}>+92-334-2949667</Text>
+          <Title className="footer-contact-us" style={{ color: "#fff" }}>Contact Us</Title>
+          <Text className="footer-text" style={{ display: "block", color: "#ccc" }}>serl.ncgsa@gmail.com</Text>
+          <br/>
+          <Text className="footer-text" style={{ display: "block", color: "#ccc" }}>+92-51-907-5864 | 5799</Text>
+          <br/>
+
+          <Text className="footer-text"  style={{ display: "block", color: "#ccc" }}>+92-334-2949667</Text>
         </Col>
 
         {/* Explore */}
         <Col xs={24} sm={12} md={5}>
-          <Title level={5} style={{ color: "#fff" }}>Explore</Title>
+          <Title className="footer-contact-us"  style={{ color: "#fff" }}>Explore</Title>
           <Space direction="vertical">
-            <Link style={{ color: "#ff9500" }}>SERL</Link>
-            <Link style={{ color: "#ccc" }}>Space Outreach</Link>
-            <Link style={{ color: "#ccc" }}>Space Education</Link>
-            <Link style={{ color: "#ccc" }}>Capacity Building</Link>
-            <Link style={{ color: "#ccc" }}>Resources</Link>
+            <Link className="footer-text" style={{ color: "#ff9500" }}>SERL</Link>
+            <Link className="footer-text" style={{ color: "#ccc" }}>Space Outreach</Link>
+            <Link className="footer-text" style={{ color: "#ccc" }}>Space Education</Link>
+            <Link className="footer-text" style={{ color: "#ccc" }}>Capacity Building</Link>
+            <Link className="footer-text" style={{ color: "#ccc" }}>Resources</Link>
           </Space>
         </Col>
       </Row>
@@ -87,25 +88,14 @@ const AppFooter = () => {
             style={{ marginBottom: 10 }}
           />
           <div>
-            <Text style={{ color: "#ccc" }} strong>National Center of GIS & Space Applications</Text>
+            <Text className="footer-text"  style={{ color: "#ccc" }} strong>National Center of GIS & Space Applications</Text>
             <br />
-            <Text style={{ color: "#ccc" }} strong>Institute of Space Technology</Text>
+            <Text className="footer-text" style={{ color: "#ccc" }} strong>Institute of Space Technology</Text>
             <br />
-            <Text style={{ color: "#ccc" }}>Islamabad, Pakistan</Text>
+            <Text className="footer-text" style={{ color: "#ccc" }}>Islamabad, Pakistan</Text>
           </div>
          </Space>
-        </Col>
-
-        <Col xs={24} sm={12} md={6}>
-          <Title level={5} style={{ color: "#fff" }}>Contact Us</Title>
-          <Text style={{ display: "block", color: "#ccc" }}>+92-51-907-5799</Text>
-          <Text style={{ display: "block", color: "#ccc" }}>+92-51-907-5578</Text>
-          <Text style={{ display: "block", color: "#ccc" }}>ncgsa@ist.edu.pk</Text>
-        </Col>
-
-        <Col xs={24} sm={12} md={6}>
-          <Title level={5} style={{ color: "#fff" }}>Follow Us</Title>
-          <Space size="middle">
+         <Space style={{marginTop:"20px"}} size="middle">
             <FacebookFilled style={{ fontSize: 20, color: "#fff" }} />
             <LinkedinFilled style={{ fontSize: 20, color: "#fff" }} />
             <InstagramFilled style={{ fontSize: 20, color: "#fff" }} />
@@ -114,12 +104,21 @@ const AppFooter = () => {
             <WhatsAppOutlined style={{ fontSize: 20, color: "#fff" }} />
           </Space>
         </Col>
+
+        <Col xs={24} sm={12} md={6}>
+          <Title className="footer-contact-us" style={{ color: "#fff" }}>Contact Us</Title>
+          <Text className="footer-text" style={{ display: "block", color: "#ccc" }}>+92-51-907-5799</Text>
+          <Text className="footer-text" style={{ display: "block", color: "#ccc" }}>+92-51-907-5578</Text>
+          <Text className="footer-text" style={{ display: "block", color: "#ccc" }}>ncgsa@ist.edu.pk</Text>
+        </Col>
+
+    
       </Row>
 
       {/* Copyright */}
       <Divider style={{ backgroundColor: "#888", margin: "30px 0 10px" }} />
-      <Text style={{ color: "#888", fontSize: "12px", display: "block", textAlign: "center" }}>
-        © 2025 — Higher Education Commission of Pakistan
+      <Text style={{ color: "#888", fontSize: "1.3rem", display: "block", textAlign: "center" }}>
+        © 2025 — Space Education Research Lab
       </Text>
     </div>
     </Footer>

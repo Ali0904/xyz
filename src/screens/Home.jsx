@@ -4,7 +4,7 @@ import SpaceComponent from '../MainComponents/HomeComponents/SpaceComponent';
 
 const Home = () => {
   return (
-    <div>
+    <div >
       <HeroSection />
       <SpaceComponent />
     </div>

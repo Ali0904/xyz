@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Row, Col, Typography, Grid, Button, Carousel } from 'antd';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 
@@ -6,6 +6,10 @@ const { Title, Paragraph } = Typography;
 const { useBreakpoint } = Grid;
 
 const SpaceOutreach = () => {
+   const [dotPosition, setDotPosition] = useState('top');
+  const handlePositionChange = ({ target: { value } }) => {
+    setDotPosition(value);
+  };
   const screens = useBreakpoint();
   const isMobile = !screens.lg;
   const carouselRef = React.useRef(null);
@@ -45,7 +49,7 @@ const SpaceOutreach = () => {
         pointerEvents: 'none'
       }} />  
       
-      <div style={{ width: "100%", maxWidth: "1200px", margin: '0 auto', position: 'relative', zIndex: 1 }}>
+      <div style={{ width: "100%", maxWidth: "1400px", margin: '0 auto', position: 'relative', zIndex: 1 }}>
         {/* Row 1: Text Content */}
         <Row justify="start" style={{ marginBottom: '60px' }}>
           <Col xs={24} lg={23} style={{ textAlign: 'left', paddingLeft: isMobile ? '10px' : '40px' }}>
@@ -95,7 +99,7 @@ const SpaceOutreach = () => {
           autoplay={autoplayEnabled}
           autoplaySpeed={3000}
           dots={false}
-          infinite
+          
           speed={1000}
           effect="scroll"
           slidesToShow={isMobile ? 1 : 3}
@@ -142,74 +146,7 @@ const SpaceOutreach = () => {
 
         {/* Arrows unchanged */}
         {/* Arrows unchanged */}
-        <Button
-          type="text"
-          icon={<LeftOutlined />}
-          onClick={() => carouselRef.current?.prev()}
-          style={{
-            position: 'absolute',
-            left: 0,
-            top: '50%',
-            transform: 'translate(-50px, -50%)',
-            backgroundColor: 'rgba(0, 0, 0, 0)',
-            color: '#ccbb00ff',
-            border: 'none',
-            borderRadius: '50%',
-            width: '45px',
-            height: '45px',
-            zIndex: 10,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            opacity: 0.8,
-            fontSize: '20px',
-            fontWeight: 'bold'
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.opacity = '1';
-            e.target.style.backgroundColor = 'rgba(0,0,0,0.9)';
-            e.target.style.transform = 'translate(-50px, -50%) scale(1.1)';
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.opacity = '0.8';
-            e.target.style.backgroundColor = 'rgba(0,0,0,0.7)';
-            e.target.style.transform = 'translate(-50px, -50%) scale(1)';
-          }}
-        />
-        <Button
-          type="text"
-          icon={<RightOutlined />}
-          onClick={() => carouselRef.current?.next()}
-          style={{
-            position: 'absolute',
-            right: 0,
-            top: '50%',
-            transform: 'translate(50px, -50%)',
-            backgroundColor: 'rgba(0, 0, 0, 0)',
-            color: '#ccbb00ff',
-            border: 'none',
-            borderRadius: '50%',
-            width: '45px',
-            height: '45px',
-            zIndex: 10,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            opacity: 0.8,
-            fontSize: '20px',
-            fontWeight: 'bold'
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.opacity = '1';
-            e.target.style.backgroundColor = 'rgba(0,0,0,0.9)';
-            e.target.style.transform = 'translate(50px, -50%) scale(1.1)';
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.opacity = '0.8';
-            e.target.style.backgroundColor = 'rgba(0,0,0,0.7)';
-            e.target.style.transform = 'translate(50px, -50%) scale(1)';
-          }}
-        />
+        
       </div>
     </div>
   </Col>

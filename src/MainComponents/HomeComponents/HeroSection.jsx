@@ -26,34 +26,59 @@ const HeroSection = () => {
         className="hero-row"
         gutter={[24, 24]}
       >
-        <Col xs={24} lg={12}>
-          <Space direction="vertical" size={isMobile ? 12 : 24} style={{ width: "100%" }}>
-            <Title level={3} className={`hero-title-main ${isMobile ? "hero-title-center" : "hero-title-left"}`}>
+        <Col  xs={24} lg={12}>
+     
+              <Title className="hero-title">
               Space Education Research Lab
             </Title>
-            <Title level={isMobile ? 2 : 1} className={`hero-title-space ${isMobile ? "hero-title-center" : "hero-title-left"}`}>
+            <Title className="big-title"  >
               SPACE
             </Title>
-            <Paragraph strong className={`hero-paragraph-highlight ${isMobile ? "hero-title-center" : "hero-title-left"}`}>
+            <Paragraph className="hero-desc" strong >
               EDUCATION | AWARENESS | OUTREACH
             </Paragraph>
-            <Paragraph className={`hero-paragraph-desc ${isMobile ? "hero-title-center" : "hero-title-left"}`}>
+            <Paragraph className="hero-para">
               Inspiring Space Innovation Through STEM Learning
             </Paragraph>
-          </Space>
+   
+       
+  ``
         </Col>
-        <Col xs={24} lg={12}>
-          <Space direction="vertical" size={isMobile ? 12 : 24} style={{ width: "100%", alignItems: "center", justifyContent: "center", display: "flex" }}>
-            <Card className="hero-desc-card" bodyStyle={{ padding: 20 }} bordered={false}>
-              <Paragraph className="hero-desc-paragraph">
-                Space Education Research Lab (SERL), is one of the labs of National Center Of GIS & Space Applications (NCGSA) that primarily focuses to develop innovative and sustainable interactive learning methods and strategies for space science and technology awareness, education and popularization.
-              </Paragraph>
-            </Card>
-            <Button type="default" size="large" className={`hero-readmore-btn ${isMobile ? "hero-btn-center" : "hero-btn-left"}`}>
-              Read More
-            </Button>
-          </Space>
-        </Col>
+       <Col xs={24} lg={12}>
+  <Space
+    direction="vertical"
+    size={isMobile ? 12 : 24}
+    style={{
+      width: "100%",
+      alignItems: "flex-start", // ✅ Correct
+      justifyContent: "flex-start", // optional
+      display: "flex"
+    }}
+  >
+    <Card
+      className="hero-desc-card"
+      bodyStyle={{ padding: 20 }}
+      bordered={false}
+    >
+      <Paragraph className="hero-desc-paragraph">
+        Space Education Research Lab (SERL), is one of the labs of National
+        Center Of GIS & Space Applications (NCGSA) that primarily focuses to
+        develop innovative and sustainable interactive learning methods and
+        strategies for space science and technology awareness, education and
+        popularization.
+      </Paragraph>
+    </Card>
+    <Button
+      type="default"
+      size="large"
+      className="hero-readmore-btn"
+      style={{backgroundColor:"#F59E0B "}}
+    >
+      Read More
+    </Button>
+  </Space>
+</Col>
+
       </Row>
     </Card>
   );

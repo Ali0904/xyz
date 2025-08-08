@@ -139,7 +139,7 @@ const StatsSection = () => {
         justifyContent: "center",
         display: "flex",
         backgroundColor: 'transparent',
-        padding: isMobile ? '30px 10px' : '40px 20px',
+        padding: isMobile ? '30px 10px' : '10px 10px',
         minHeight: isMobile ? '250px' : '300px'
       }}
     >
@@ -149,9 +149,9 @@ const StatsSection = () => {
         justify="center"
         align="middle"
         style={{ 
-          // maxWidth: '1400px', 
+          maxWidth: '1400px', 
           margin: '0 auto',
-          // width: '100%'
+          width: '100%'
         }}
       >
         {stats.map((stat, index) => {
@@ -177,11 +177,11 @@ const StatsSection = () => {
                 style={{
                   background: 'transparent',
                   borderRadius: '16px',
-                  width: isMobile ? '160px' : '220px',
+                  width: isMobile ? '160px' : '250px',
                   height: isMobile ? '160px' : '180px',
                   textAlign: 'center',
                   backdropFilter: 'blur(10px)',
-                  border: `1px solid rgba(187, 200, 3, 1)`,
+                  border: `2px solid rgba(187, 200, 3, 1)`,
                   transition: 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
                   transform: isStatVisible 
                     ? 'translateY(0) scale(1)' 
@@ -190,7 +190,7 @@ const StatsSection = () => {
                   cursor: 'pointer',
                 }}
                 bodyStyle={{ 
-                  padding: isMobile ? "16px" : "24px",
+                  padding: isMobile ? "16px" : "10px",
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',

@@ -6,7 +6,13 @@
   width:100%;
   max-width: 1200px;
 }
-
+.standard-layout{
+    width:100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding:20px;
+  background-color: black;
+}
 html, body {
   margin: 0;
   padding: 0;
