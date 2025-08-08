@@ -1,4 +1,9 @@
 
+/* Add gap between Ant Design Carousel images */
+.ant-carousel .slick-slide {
+  padding: 0 12px;
+}
+
 .hero-bg-card {
   background-color: #000000;
   min-height: 80vh;
