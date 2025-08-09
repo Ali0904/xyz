@@ -1,0 +1,63 @@
+/* Root layout */
+.so-root {
+  min-height: 100vh !important;
+  background-color: #000000 !important;
+}
+
+/* Hero */
+.so-hero-card {
+  position: relative !important;
+  height: 80vh !important;
+  overflow: hidden !important;
+  background-image: url('../assets/images/mainbg.jpg');
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+}
+.so-hero-card .ant-card-body { padding: 0 !important; }
+.so-hero-center { height: 100% !important; }
+.so-hero-col { width: 100% !important; max-width: 1200px !important; display: flex !important; align-items: center !important; justify-content: center !important; }
+.so-hero-title { color: #FFFFFF !important; font-size: 9.2rem !important; font-weight: 600 !important; margin: 0 !important; font-family: Inter, sans-serif !important; text-align: center !important; }
+
+/* Program card block */
+.so-program-row { padding: 60px 0 !important; background: #000000 !important; }
+.so-program-card {
+  width: 100% !important;
+  background-color: #1a1a1a !important;
+  border-radius: 20px !important;
+  border: none !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+}
+.so-program-card .ant-card-body { padding: 70px 100px !important; background-color: #1a1a1a !important; border-radius: 20px !important; }
+.so-program-space { width: 100% !important; }
+.so-program-title { color: #ffffff !important; margin-bottom: 8px !important; font-size: 30px !important; font-weight: 700 !important; }
+.so-program-underline { display: block !important; width: 80px !important; height: 3px !important; background-color: #ff8c00 !important; margin-bottom: 32px !important; }
+
+/* Select exact look */
+.so-program-select { width: 100% !important; height: 55px !important; }
+.so-program-select .ant-select-selector {
+  height: 55px !important;
+  background-color: #1a1a1a !important;
+  border: 1px solid #555 !important;
+  color: #ffffff !important;
+}
+.so-program-select .ant-select-selection-item { color: #ffffff !important; line-height: 53px !important; }
+.so-program-select .ant-select-selector:hover { border-color: #ff8c00 !important; }
+.ant-select-focused .ant-select-selector { border-color: #ff8c00 !important; box-shadow: 0 0 0 2px rgba(255, 140, 0, 0.2) !important; }
+.so-program-select .ant-select-dropdown { background-color: #1a1a1a !important; border: 1px solid #555 !important; border-radius: 8px !important; }
+.so-program-select .ant-select-item-option { background-color: #1a1a1a !important; color: #ffffff !important; }
+.so-program-select .ant-select-item-option:hover { background-color: #333333 !important; }
+.so-program-select .ant-select-item-option-selected { background-color: #ff8c00 !important; color: #ffffff !important; }
+.so-program-select-suffix { color: #ff8c00 !important; font-size: 16px !important; }
+
+/* Dynamic area */
+.so-dynamic-row { background: #000000 !important; }
+
+/* Responsive minor adjustments if needed */
+@media (max-width: 768px) {
+  .so-program-card .ant-card-body { padding: 40px 24px !important; }
+}
