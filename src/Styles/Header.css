@@ -1,0 +1,88 @@
+/* Header layout and nav styles - pixel-preserved */
+.app-header {
+  background-color: #232121ff !important;
+  border-bottom: 1px solid #333 !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  padding: 0 !important;
+  height: auto !important;
+  width: 100% !important;
+}
+
+/* Heights and paddings mapped to previous inline logic */
+.app-header-row {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 24px 0 2px !important;
+}
+.app-header-row.h-lg {
+  height: 100px !important;
+}
+.app-header-row.h-md {
+  height: 80px !important;
+  padding: 0 8px 0 2px !important;
+}
+.app-header-row.h-sm {
+  height: 70px !important;
+  padding: 0 4px 0 2px !important;
+}
+
+.app-header-right {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+}
+
+.app-header-nav {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Nav item look preserved by existing .header-nav-item rules in index.css */
+.header-nav-item {
+  color: #D1D5DB !important;
+  font-family: Inter, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  border-bottom: 2px solid transparent !important;
+  padding-bottom: 4px !important;
+}
+.header-nav-item.active {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  border-bottom-color: #F97316 !important;
+}
+
+/* Tweak at 786px exact */
+@media (max-width: 786px) {
+  .header-nav-item { font-size: 14px !important; }
+}
+
+/* Root layout global overflow fix */
+.app-root-layout {
+  min-height: 100vh !important;
+  background-color: #000 !important;
+  overflow-x: hidden !important;
+}
+
+.app-content {
+  min-height: 100vh !important;
+  padding: 0 !important;
+}
+
+/* Drawer trigger icon */
+.app-drawer-trigger-icon {
+  font-size: 24px !important;
+  color: #fff !important;
+}
+
+.app-drawer-trigger {
+  margin-left: 8px !important;
+  color: #fff !important;
+  background: none !important;
+  border: none !important;
+}

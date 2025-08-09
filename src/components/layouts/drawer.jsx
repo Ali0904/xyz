@@ -1,84 +1,79 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import { Drawer, Button, Menu, Grid } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
+import { useLocation, useNavigate } from 'react-router-dom';
+import '../../Styles/Drawer.css';
 
 const { useBreakpoint } = Grid;
 
 const menuItems = [
-  { key: 'HOME', label: 'Home' },
-  { key: 'ABOUT', label: 'About' },
-  { key: 'SPACE_OUTREACH', label: 'Space Outreach' },
-  { key: 'SPACE_EDUCATION', label: 'Space Education' },
-  { key: 'CAPACITY_BUILDING', label: 'Capacity Building' },
-  { key: 'RESOURCES', label: 'Resources' },
-  { key: 'CONTACT_US', label: 'Contact Us', noHighlight: true },
+  { key: 'HOME', label: 'Home', path: '/' },
+  { key: 'ABOUT', label: 'About', path: '/about' },
+  { key: 'SPACE_OUTREACH', label: 'Space Outreach', path: '/space-outreach' },
+  { key: 'SPACE_EDUCATION', label: 'Space Education', path: '/space-education' },
+  { key: 'CAPACITY_BUILDING', label: 'Capacity Building', path: '/capacity-building' },
+  { key: 'RESOURCES', label: 'Resources', path: '/resources' },
+  { key: 'CONTACT_US', label: 'Contact Us', noHighlight: true }
 ];
 
-const DrawerMenu = ({ activeKey = 'HOME', onSelect }) => {
-  // ...existing code...
+const mapPathToKey = (pathname) => {
+  if (pathname === '/' || pathname.startsWith('/home')) return 'HOME';
+  if (pathname.startsWith('/about')) return 'ABOUT';
+  if (pathname.startsWith('/space-outreach')) return 'SPACE_OUTREACH';
+  if (pathname.startsWith('/space-education')) return 'SPACE_EDUCATION';
+  if (pathname.startsWith('/capacity-building')) return 'CAPACITY_BUILDING';
+  if (pathname.startsWith('/resources')) return 'RESOURCES';
+  return 'HOME';
+};
 
+const DrawerMenu = ({ activeKey }) => {
   const screens = useBreakpoint();
   const [visible, setVisible] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const selectedKey = activeKey || mapPathToKey(location.pathname);
+
+  const handleSelect = (key) => {
+    const item = menuItems.find((i) => i.key === key);
+    if (item && item.path) {
+      navigate(item.path);
+    }
+  };
+
   return (
     <>
       <Drawer
-        placement="left"
+        placement="right"
         closable={false}
         onClose={() => setVisible(false)}
-        visible={visible}
-        bodyStyle={{ backgroundColor: '#232121', padding: 0 }}
+        open={visible}
         width={240}
+        rootClassName="app-drawer"
       >
         <Menu
           mode="vertical"
-          selectedKeys={[activeKey]}
+          selectedKeys={[selectedKey]}
+          className="app-drawer-menu"
           onClick={({ key }) => {
-            if (onSelect) onSelect(key);
+            if (key === 'CONTACT_US') {
+              setVisible(false);
+              return;
+            }
+            handleSelect(key);
             setVisible(false);
           }}
-          style={{
-            backgroundColor: '#232121',
-            color: 'white',
-            border: 'none',
-          }}
-        >
-          {menuItems.filter(item => item.key !== 'CONTACT_US').map(({ key, label, noHighlight }) => (
-            <Menu.Item
-              key={key}
-              style={{
-                color: 'white',
-                backgroundColor:
-                  !noHighlight && activeKey === key ? 'rgba(255, 149, 0, 0.2)' : 'transparent',
-                fontFamily: 'Inter',
-              }}
-            >
-              {label}
-            </Menu.Item>
-          ))}
-        </Menu>
+          items={menuItems
+            .filter((item) => item.key !== 'CONTACT_US')
+            .map(({ key, label }) => ({ key, label }))}
+        />
         <Button
           type="primary"
-          style={{
-            backgroundColor: '#FF9500',
-            color: '#000',
-            width: '140px',
-            margin: '12px 24px 0 16px',
-            fontWeight: 600,
-            fontSize: screens.xl ? '16px' : '15px',
-            borderRadius: '8px',
-            border: 'none',
-            boxShadow: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            textAlign: 'center',
-            padding: 0,
-            fontFamily: 'Inter',
-          }}
           size={screens.xl ? 'middle' : 'small'}
+          className="app-drawer-contact-btn"
           onClick={() => {
-            if (onSelect) onSelect('CONTACT_US');
             setVisible(false);
+            handleSelect('CONTACT_US');
           }}
         >
           CONTACT US
@@ -86,13 +81,13 @@ const DrawerMenu = ({ activeKey = 'HOME', onSelect }) => {
       </Drawer>
       <Button
         type="text"
-        icon={<MenuOutlined style={{ fontSize: 24, color: '#fff' }} />}
+        icon={<MenuOutlined className="app-drawer-trigger-icon" />}
         onClick={() => setVisible(true)}
-        style={{ marginLeft: 8, color: '#fff', background: 'none', border: 'none' }}
+        className="app-drawer-trigger"
       />
     </>
   );
-}
+};
 
-export default DrawerMenu;
+export default memo(DrawerMenu);
 

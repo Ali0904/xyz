@@ -1,18 +1,17 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Layout as AntLayout, Grid } from 'antd';
 import { useLocation } from 'react-router-dom';
 import Header from './header';
 import Footer from './footer';
+import '../../Styles/Header.css';
 
 const { Content } = AntLayout;
 const { useBreakpoint } = Grid;
 
 const Layout = ({ children }) => {
   const screens = useBreakpoint();
-  const isMobile = !screens.md;
   const location = useLocation();
   
-  // Determine active nav item based on current route
   const getActiveNavItem = () => {
     const path = location.pathname;
     if (path === '/') return 'HOME';
@@ -26,15 +25,9 @@ const Layout = ({ children }) => {
   const activeNavItem = getActiveNavItem();
 
   return (
-    <AntLayout style={{ 
-      minHeight: '100vh', 
-      backgroundColor: '#000' 
-    }}>
+    <AntLayout className="app-root-layout">
       <Header activeNavItem={activeNavItem} />
-      <Content style={{ 
-        minHeight: '100vh',
-        padding: 0
-      }}>
+      <Content className="app-content">
         {children}
       </Content>
       <Footer />
@@ -42,4 +35,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+export default memo(Layout);

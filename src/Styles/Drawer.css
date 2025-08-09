@@ -1,0 +1,49 @@
+/* Drawer wrapper */
+.app-drawer .ant-drawer-content {
+  background-color: #232121 !important;
+}
+
+.app-drawer .ant-drawer-body {
+  padding: 0 !important;
+  background-color: #232121 !important;
+}
+
+/* Menu inside Drawer */
+.app-drawer-menu {
+  background-color: #232121 !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.app-drawer-menu .ant-menu-item {
+  color: #ffffff !important;
+  font-family: Inter, sans-serif !important;
+}
+
+.app-drawer-menu .ant-menu-item-selected,
+.app-drawer-menu .ant-menu-item-active {
+  background-color: rgba(255, 149, 0, 0.2) !important;
+}
+
+/* Contact button */
+.app-drawer-contact-btn {
+  background-color: #FF9500 !important;
+  color: #000 !important;
+  width: 140px !important;
+  margin: 12px 24px 0 16px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  border-radius: 8px !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 0 !important;
+  font-family: Inter, sans-serif !important;
+}
+
+@media (max-width: 1199.98px) {
+  .app-drawer-contact-btn { font-size: 15px !important; }
+}
