@@ -1,19 +1,19 @@
 import React from 'react';
+import { Row, Col } from 'antd';
 import AboutSection from '../MainComponents/AboutComponents/AboutSection';
-import VisionSection from '../MainComponents/AboutComponents/VisionSection';
-import ContributionSection from '../MainComponents/AboutComponents/ContributionSection';
-import MissionSection from '../MainComponents/AboutComponents/MissionSection';
-import ModusOperandiSection from '../MainComponents/AboutComponents/ModusOperandiSection';
-import SpaceDomainsSection from '../MainComponents/AboutComponents/SpaceDomainsSection';
-import AwardsSection from '../MainComponents/AboutComponents/AwardsSection';
 import AboutCoreContent from '../MainComponents/AboutComponents/AboutCoreContent';
+import '../Styles/About.layout.css';
 
 const About = () => {
   return (
-    <div style={{ backgroundColor: "#1f1f1f" }}>
-      <AboutSection />
-      <AboutCoreContent/>
-    </div>
+    <Row gutter={[0, 0]} className="about-screen-bg">
+      <Col span={24}>
+        <AboutSection />
+      </Col>
+      <Col span={24}>
+        <AboutCoreContent />
+      </Col>
+    </Row>
   );
 };
 

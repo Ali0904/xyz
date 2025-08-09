@@ -1,0 +1,17 @@
+.fo-root { min-height: 100vh !important; background-image: url('../assets/images/homemainbg.jpg'); background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; background-attachment: fixed !important; }
+.fo-header { padding: 60px 0 20px !important; background: rgba(0,0,0,0.7) !important; }
+.fo-header-card { background-color: transparent !important; border-radius: 20px !important; border: 2px solid #FF9500 !important; box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important; backdrop-filter: blur(10px) !important; }
+.fo-header-card .ant-card-body { padding: 50px 80px !important; background-color: transparent !important; border-radius: 20px !important; }
+.fo-title { color: white !important; margin-bottom: 8px !important; font-size: 36px !important; font-weight: 700 !important; text-align: center !important; }
+.fo-underline { display: block !important; width: 120px !important; height: 4px !important; background-color: #ff8c00 !important; margin: 0 auto 32px !important; }
+.fo-select { width: 100% !important; height: 55px !important; }
+.fo-select .ant-select-selector { height: 55px !important; background-color: #1a1a1a !important; border: 1px solid #555 !important; color: white !important; }
+.fo-select .ant-select-selection-item { color: white !important; line-height: 53px !important; }
+.fo-select .ant-select-selector:hover { border-color: #ff8c00 !important; }
+.ant-select-focused .fo-select .ant-select-selector { border-color: #ff8c00 !important; box-shadow: 0 0 0 2px rgba(255,140,0,0.2) !important; }
+.fo-select .ant-select-dropdown { background-color: #1a1a1a !important; border: 1px solid #555 !important; border-radius: 8px !important; }
+.fo-select .ant-select-item-option { background-color: #1a1a1a !important; color: white !important; }
+.fo-select .ant-select-item-option:hover { background-color: #333333 !important; }
+.fo-select .ant-select-item-option-selected { background-color: #ff8c00 !important; color: white !important; }
+.fo-select-suffix { color: #ff8c00 !important; font-size: 16px !important; }
+.fo-content { background: rgba(0,0,0,0.5) !important; }

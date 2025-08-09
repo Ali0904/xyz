@@ -1,13 +1,18 @@
 import React from 'react';
+import { Row, Col } from 'antd';
 import HeroSection from '../MainComponents/HomeComponents/HeroSection';
 import SpaceComponent from '../MainComponents/HomeComponents/SpaceComponent';
 
 const Home = () => {
   return (
-    <div >
-      <HeroSection />
-      <SpaceComponent />
-    </div>
+    <Row gutter={[0, 0]}>
+      <Col span={24}>
+        <HeroSection />
+      </Col>
+      <Col span={24}>
+        <SpaceComponent />
+      </Col>
+    </Row>
   );
 };
 

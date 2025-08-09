@@ -1,0 +1,15 @@
+.sb-root { min-height: 100vh !important; background-image: url('../assets/images/homemainbg.jpg'); background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; background-attachment: fixed !important; }
+.sb-header { padding: 60px 0 20px !important; background: rgba(0,0,0,0.7) !important; }
+.sb-header-card { background-color: transparent !important; border-radius: 20px !important; border: 2px solid #FF9500 !important; box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important; backdrop-filter: blur(10px) !important; }
+.sb-header-card .ant-card-body { padding: 50px 80px !important; background-color: transparent !important; border-radius: 20px !important; }
+.sb-title { color: white !important; margin-bottom: 8px !important; font-size: 36px !important; font-weight: 700 !important; text-align: center !important; }
+.sb-underline { display: block !important; width: 120px !important; height: 4px !important; background-color: #ff8c00 !important; margin: 0 auto 32px !important; }
+.sb-main { padding: 40px 0 !important; background: rgba(0,0,0,0.5) !important; }
+.sb-main-card { background-color: transparent !important; border-radius: 20px !important; border: 2px solid #FF9500 !important; box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important; backdrop-filter: blur(10px) !important; }
+.sb-main-card .ant-card-body { padding: 60px 80px !important; background-color: transparent !important; border-radius: 20px !important; }
+.sb-intro { text-align: center !important; margin-bottom: 40px !important; }
+.sb-intro-text { color: #cccccc !important; font-size: 18px !important; line-height: 1.8 !important; display: block !important; margin-bottom: 20px !important; }
+.sb-intro-subtext { color: #cccccc !important; font-size: 16px !important; line-height: 1.6 !important; display: block !important; }
+.sb-features { background-color: rgba(255,149,0,0.1) !important; border-radius: 15px !important; padding: 30px !important; border: 1px solid rgba(255,149,0,0.3) !important; }
+.sb-features-title { color: #ff8c00 !important; margin-bottom: 20px !important; text-align: center !important; }
+.sb-features-list { color: #cccccc !important; font-size: 16px !important; line-height: 1.8 !important; }

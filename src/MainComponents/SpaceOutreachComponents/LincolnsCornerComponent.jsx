@@ -1,15 +1,14 @@
 import React from 'react';
-import { Row, Col, Space, Typography, Button, Card } from 'antd';
+import { Row, Col, Space, Typography, Button, Card, Layout } from 'antd';
 import HumanSpaceFlightFJWU from './LincolnsCorner/HumanSpaceFlightFJWU';
 import HumanSpaceFlightNLP from './LincolnsCorner/HumanSpaceFlightNLP';
 import WomenInSpaceFJWU_old from './LincolnsCorner/WomenInSpaceFJWU_old';
 import WrightBrothersDayFJWU_new from './LincolnsCorner/WrightBrothersDayFJWU_new';
-import homemainbg from '../../assets/images/homemainbg.jpg';
+import '../../Styles/LincolnsCorner.css';
 
 const { Title, Paragraph } = Typography;
 
 const LincolnsCornerComponent = ({ selectedEvent, availableEvents, onEventChange }) => {
-  // Use props instead of internal state
   const currentEvent = selectedEvent || 'human-spaceflight-fjwu';
   const eventButtons = availableEvents || ['human-spaceflight-fjwu', 'human-spaceflight-nlp', 'women-in-space-fjwu', 'wright-brothers-day-fjwu'];
 
@@ -36,80 +35,38 @@ const LincolnsCornerComponent = ({ selectedEvent, availableEvents, onEventChange
   };
 
   return (
-    <>
-      {/* Lincoln's Corner Main Section */}
-      <section style={{ 
-        padding: '20px 0', 
-        backgroundImage: `url(${homemainbg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed',
-        minHeight: 'auto'
-      }}>
-        <Row justify="center">
-          <Col xs={24} lg={24} xl={24}>
-            <Card
-              style={{ 
-                backgroundColor: 'transparent', 
-                borderRadius: '30px', 
-                border: '2px solid #FF9500',
-                maxWidth: '3800px',
-                width: '95%',
-                margin: '0 auto'
-              }}
-              bodyStyle={{ 
-                padding: '60px 40px', 
-                backgroundColor: 'transparent',
-                borderRadius: '30px'
-              }}
-            >
-              <Space direction="vertical" size="large" style={{ width: '100%' }}>
-                {/* Header */}
-                <div style={{ textAlign: 'left', paddingBottom: '20px' }}>
-                  <Title level={1} style={{ marginBottom: '16px', color: 'white' }}>
-                    Lincoln's Corner
-                  </Title>
-                  <div style={{
-                    width: '1400px',
-                    height: '2px',
-                    backgroundColor: 'white',
-                    marginBottom: '24px'
-                  }}></div>
-                  <Paragraph style={{ fontSize: '18px', color: '#cccccc', marginBottom: '24px' }}>
-                    SERL's Lincoln's Corner celebrates the spirit of innovation and exploration through specialized programs focusing on human spaceflight, aviation history, and the pioneering achievements of women in space science and technology.
-                  </Paragraph>
-                  
-                  {/* Event Navigation */}
-                  <Space size="small" wrap>
-                    {eventButtons.map((event) => (
-                      <Button
-                        key={event}
-                        size="large"
-                        type={currentEvent === event ? 'primary' : 'default'}
-                        style={{
-                          backgroundColor: currentEvent === event ? '#ff8c00' : '#333333',
-                          borderColor: currentEvent === event ? '#ff8c00' : '#555555',
-                          color: currentEvent === event ? 'white' : '#cccccc',
-                          minWidth: '180px',
-                          height: '40px'
-                        }}
-                        onClick={() => onEventChange && onEventChange(event)}
-                      >
-                        {eventTitles[event]}
-                      </Button>
-                    ))}
-                  </Space>
-                </div>
+    <Layout className="lc-root">
+      <Row justify="center">
+        <Col xs={24} lg={24} xl={24}>
+          <Card bordered={false} className="lc-card">
+            <Space direction="vertical" size="large" className="lc-space">
+              <div className="lc-header">
+                <Title level={1} className="lc-title">Lincoln's Corner</Title>
+                <Typography.Text className="lc-underline" aria-hidden="true" />
+                <Paragraph className="lc-paragraph">
+                  SERL's Lincoln's Corner celebrates the spirit of innovation and exploration through specialized programs focusing on human spaceflight, aviation history, and the pioneering achievements of women in space science and technology.
+                </Paragraph>
+                <Space size="small" wrap>
+                  {eventButtons.map((event) => (
+                    <Button
+                      key={event}
+                      size="large"
+                      type={currentEvent === event ? 'primary' : 'default'}
+                      className={currentEvent === event ? 'lc-btn lc-btn-active' : 'lc-btn'}
+                      onClick={() => onEventChange && onEventChange(event)}
+                    >
+                      {eventTitles[event]}
+                    </Button>
+                  ))}
+                </Space>
+              </div>
 
-                {/* Dynamic Event Content */}
-                {renderEventComponent()}
-              </Space>
-            </Card>
-          </Col>
-        </Row>
-      </section>
-    </>
+              {renderEventComponent()}
+            </Space>
+          </Card>
+        </Col>
+      </Row>
+    </Layout>
   );
 };
 

@@ -1,0 +1,10 @@
+.lc-root { padding: 20px 0 !important; background-image: url('../assets/images/homemainbg.jpg'); background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; background-attachment: fixed !important; }
+.lc-card { background-color: transparent !important; border-radius: 30px !important; border: 2px solid #FF9500 !important; max-width: 3800px !important; width: 95% !important; margin: 0 auto !important; }
+.lc-card .ant-card-body { padding: 60px 40px !important; background-color: transparent !important; border-radius: 30px !important; }
+.lc-space { width: 100% !important; }
+.lc-header { text-align: left !important; padding-bottom: 20px !important; }
+.lc-title { margin-bottom: 16px !important; color: white !important; }
+.lc-underline { display: block !important; width: 1400px !important; height: 2px !important; background-color: white !important; margin-bottom: 24px !important; }
+.lc-paragraph { font-size: 18px !important; color: #cccccc !important; margin-bottom: 24px !important; }
+.lc-btn { min-width: 180px !important; height: 40px !important; background-color: #333333 !important; border-color: #555555 !important; color: #cccccc !important; }
+.lc-btn-active { background-color: #ff8c00 !important; border-color: #ff8c00 !important; color: white !important; }

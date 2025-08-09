@@ -1,0 +1,10 @@
+.sf-root { padding: 20px 0 !important; background-image: url('../assets/images/homemainbg.jpg'); background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; background-attachment: fixed !important; }
+.sf-card { background-color: transparent !important; border-radius: 30px !important; border: 2px solid #FF9500 !important; max-width: 3800px !important; width: 95% !important; margin: 0 auto !important; }
+.sf-card .ant-card-body { padding: 60px 40px !important; background-color: transparent !important; border-radius: 30px !important; }
+.sf-space { width: 100% !important; }
+.sf-header { text-align: left !important; padding-bottom: 20px !important; }
+.sf-title { margin-bottom: 16px !important; color: white !important; }
+.sf-underline { display: block !important; width: 1400px !important; height: 2px !important; background-color: white !important; margin-bottom: 24px !important; }
+.sf-paragraph { font-size: 18px !important; color: #cccccc !important; margin-bottom: 24px !important; }
+.sf-btn { min-width: 140px !important; height: 40px !important; background-color: #333333 !important; border-color: #555555 !important; color: #cccccc !important; }
+.sf-btn-active { background-color: #ff8c00 !important; border-color: #ff8c00 !important; color: white !important; }

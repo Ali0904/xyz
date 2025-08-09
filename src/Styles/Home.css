@@ -1,3 +1,17 @@
+.ant-card.hero-bg-card .ant-card-body {
+  padding: 0 !important;
+}
+
+.hero-right-col-space {
+  width: 100% !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  display: flex !important;
+}
+
+.hero-desc-card .ant-card-body {
+  padding: 20px !important;
+}
 
 /* Add gap between Ant Design Carousel images */
 .ant-carousel .slick-slide {
@@ -6,6 +20,9 @@
 
 .hero-bg-card {
   background-color: #000000;
+  background-image: url('../assets/images/mainbg.jpg');
+  background-size: cover;
+  background-position: center;
   min-height: 80vh;
   border-radius: 15px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.2);
@@ -94,7 +111,7 @@
 
 .big-title{
     font-size: 11.7rem !important;
-  color:#F59E0B !important;
+  color:#FF9500 !important;
   text-align : left !important;
   margin: 0% !important;
 
@@ -123,7 +140,7 @@
 @media (max-width: 768px) {
 .big-title{
     font-size: 8rem !important;
-  color:#F59E0B !important;
+  color:#FF9500 !important;
   text-align : left !important;
   margin: 0% !important;
 

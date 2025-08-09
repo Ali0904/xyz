@@ -1,0 +1,10 @@
+.wsw-root { padding: 20px 0 0 0 !important; background-image: url('../assets/images/homemainbg.jpg'); background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; background-attachment: fixed !important; min-height: 500px !important; }
+.wsw-card { background-color: transparent !important; border-radius: 30px !important; border: 2px solid #FF9500 !important; max-width: 1200px !important; width: 100% !important; margin: 0 auto !important; margin-bottom: 0 !important; padding-bottom: 0 !important; }
+.wsw-card .ant-card-body { padding: 40px 40px 0 40px !important; background-color: transparent !important; border-radius: 30px !important; }
+.wsw-space { width: 100% !important; }
+.wsw-header { text-align: left !important; padding-bottom: 20px !important; }
+.wsw-title { margin-bottom: 16px !important; color: white !important; }
+.wsw-underline { display: block !important; width: 100% !important; max-width: 1200px !important; height: 2px !important; background-color: white !important; margin-bottom: 24px !important; }
+.wsw-paragraph { font-size: 18px !important; color: #cccccc !important; margin-bottom: 24px !important; }
+.wsw-btn { min-width: 80px !important; height: 40px !important; background-color: #333333 !important; border-color: #555555 !important; color: #cccccc !important; }
+.wsw-btn-active { background-color: #ff8c00 !important; border-color: #ff8c00 !important; color: white !important; }

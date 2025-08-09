@@ -1,0 +1,11 @@
+.sh-root { min-height: 100vh !important; background-image: url('../assets/images/homemainbg.jpg'); background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; background-attachment: fixed !important; }
+.sh-header { padding: 100px 0 60px !important; }
+.sh-title { color: white !important; text-align: center !important; margin-bottom: 60px !important; font-size: 48px !important; font-weight: 700 !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important; }
+.sh-select-wrap { text-align: center !important; margin-bottom: 50px !important; }
+.sh-select { width: 400px !important; background-color: rgba(0,0,0,0.7) !important; border-radius: 10px !important; }
+.sh-select-suffix { color: #ff8c00 !important; }
+.sh-dropdown { background: rgba(0,0,0,0.9) !important; backdrop-filter: blur(10px) !important; border: 1px solid #FF9500 !important; }
+.sh-dropdown .ant-select-item { color: #cccccc !important; background: transparent !important; }
+.sh-dropdown .ant-select-item:hover { background: rgba(255,149,0,0.2) !important; color: #ff8c00 !important; }
+.sh-dropdown .ant-select-item-option-selected { background: rgba(255,149,0,0.3) !important; color: #ff8c00 !important; }
+.sh-option-text { color: #cccccc !important; }
