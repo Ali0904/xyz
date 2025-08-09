@@ -1,0 +1,14 @@
+.hv-root { min-height: 100vh !important; background-image: url('../assets/images/homemainbg.jpg'); background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; background-attachment: fixed !important; }
+.hv-header { padding: 60px 0 20px !important; background: rgba(0,0,0,0.7) !important; }
+.hv-header-card { background-color: transparent !important; border-radius: 20px !important; border: 2px solid #FF9500 !important; box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important; backdrop-filter: blur(10px) !important; }
+.hv-header-card .ant-card-body { padding: 50px 80px !important; background-color: transparent !important; border-radius: 20px !important; }
+.hv-title { color: white !important; margin-bottom: 8px !important; font-size: 36px !important; font-weight: 700 !important; text-align: center !important; }
+.hv-underline { display: block !important; width: 120px !important; height: 4px !important; background-color: #ff8c00 !important; margin: 0 auto 32px !important; }
+.hv-select-wrap { display: flex !important; justify-content: center !important; margin-bottom: 40px !important; }
+.hv-select { width: 300px !important; height: 50px !important; }
+.hv-select-suffix { color: #FF9500 !important; font-size: 16px !important; }
+.hv-dropdown { background: rgba(0,0,0,0.9) !important; backdrop-filter: blur(10px) !important; border: 1px solid #FF9500 !important; }
+.hv-dropdown .ant-select-item { color: #cccccc !important; background: transparent !important; }
+.hv-dropdown .ant-select-item:hover { background: rgba(255,149,0,0.1) !important; }
+.hv-dropdown .ant-select-item-option-selected { background: rgba(255,149,0,0.2) !important; color: #FF9500 !important; }
+.hv-content { padding: 0 0 60px !important; background: rgba(0,0,0,0.7) !important; }

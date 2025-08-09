@@ -1,0 +1,12 @@
+.sv-root { min-height: 100vh !important; background-image: url('../assets/images/homemainbg.jpg'); background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; background-attachment: fixed !important; }
+.sv-header { padding: 100px 0 60px !important; }
+.sv-title { color: white !important; text-align: center !important; margin-bottom: 60px !important; font-size: 48px !important; font-weight: 700 !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important; }
+.sv-select-wrap { text-align: center !important; margin-bottom: 50px !important; }
+.sv-select { width: 400px !important; background-color: rgba(0,0,0,0.7) !important; border-radius: 10px !important; }
+.sv-select-suffix { color: #ff8c00 !important; }
+.sv-dropdown { background: rgba(0,0,0,0.9) !important; backdrop-filter: blur(10px) !important; border: 1px solid #FF9500 !important; }
+.sv-dropdown .ant-select-item { color: #cccccc !important; background: transparent !important; }
+.sv-dropdown .ant-select-item:hover { background: rgba(255,149,0,0.2) !important; color: #ff8c00 !important; }
+.sv-dropdown .ant-select-item-option-selected { background: rgba(255,149,0,0.3) !important; color: #ff8c00 !important; }
+.sv-option-text { color: #cccccc !important; }
+.sv-content { padding: 0 0 60px !important; background: rgba(0,0,0,0.7) !important; }
