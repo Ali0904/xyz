@@ -6,8 +6,8 @@ const HeroSection = () => {
   const { Title } = Typography;
   return (
     <Row className="about-bg" align="middle" justify="center" >
-      <Col xs={24} md={20} lg={16} xl={12} style={{ width: '100%' }}>
-        <Space direction="vertical" align="center" style={{ width: '100%' }}>
+      <Col xs={24} md={20} lg={16} xl={12} className="about-col-fullwidth">
+        <Space direction="vertical" align="center" className="about-space-fullwidth">
           <Title className="about-title">ABOUT</Title>
         </Space>
       </Col>
